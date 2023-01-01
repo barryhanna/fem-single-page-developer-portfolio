@@ -1,20 +1,13 @@
-import React from 'react'
-import Container from './Container'
+import React from 'react';
+import Container from './Container';
+import Navbar from './Navbar';
 
 export default function Footer() {
-	return (
-		<footer>
-			<Container>
-				<div><p>adamkeyes</p></div>
-				<nav>
-					<ul>
-						<li><a href="#">Github</a></li>
-						<li><a href="#">Frontend Mentor</a></li>
-						<li><a href="#">LinkedIn</a></li>
-						<li><a href="#">Twitter</a></li>
-					</ul>
-				</nav>
-			</Container>
-		</footer>
-	)
+  return (
+    <footer>
+      <Container>
+        <Navbar />
+      </Container>
+    </footer>
+  );
 }
