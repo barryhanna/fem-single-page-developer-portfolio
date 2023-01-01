@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -13,6 +13,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --clr-black: hsl(0,0%,8%);
+  --clr-primary: hsl(153, 71%, 59%);
+  --clr-dark-grey: hsl(0, 0%, 14%);
+  --clr-light-grey: hsl(0,0%, 85%);
+  --clr-white: hsl(0,0%, 100%);
+  --clr-error: #ff6f5b;
 }
 
 a {
