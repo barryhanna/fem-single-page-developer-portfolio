@@ -54,17 +54,36 @@ h1 {
   letter-spacing: -2.5px;
 }
 
-h1::before {
+.hero {
+  position: relative;
+}
+
+.hero::before {
   --width: 530px;
   position: absolute;
   /* background: crimson; */
   background-image: url(./assets/images/pattern-rings.svg);
   content: '';
   left: calc((var(--width) / 2) * -1);
-  top: 0;
+  transform: translateY(-50%);
   width: var(--width);
   height: 129px;
   z-index: -1;
+}
+
+.profile-photo__container {
+  position: relative;
+}
+
+.profile-photo__container::after {
+  position: absolute;
+  background-image: url(./assets/images/pattern-circle.svg);
+  content: '';
+  bottom: 5%;
+  left: 0;
+  transform: translateX(-50%);
+  width: 129px;
+  height: 129px;
 }
 
 h2 {

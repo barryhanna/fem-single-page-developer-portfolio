@@ -4,7 +4,7 @@ import heroImg from '../assets/images/image-profile-desktop.webp';
 
 export default function Hero() {
   return (
-    <div>
+    <div className="hero">
       <Container>
         <div className="columns">
           <div className="col-left">
@@ -20,7 +20,9 @@ export default function Hero() {
             <button>Contact Me</button>
           </div>
           <div className="col-right">
-            <img src={heroImg} alt="Adam Keyes" />
+            <div className="profile-photo__container">
+              <img class="hero-img" src={heroImg} alt="Adam Keyes" />
+            </div>
           </div>
         </div>
       </Container>
