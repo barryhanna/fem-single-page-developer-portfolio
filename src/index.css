@@ -55,11 +55,16 @@ h1 {
 }
 
 h1::before {
+  --width: 530px;
   position: absolute;
-  background-image: url(/assets/images/pattern-rings.svg);
+  /* background: crimson; */
+  background-image: url(./assets/images/pattern-rings.svg);
   content: '';
-  left: 0;
+  left: calc((var(--width) / 2) * -1);
   top: 0;
+  width: var(--width);
+  height: 129px;
+  z-index: -1;
 }
 
 h2 {
@@ -119,7 +124,7 @@ button:hover {
 .social-links ul {
   gap: 0.75em;
   fill: var(--clr-white);
-  transtion: fill 200ms ease-in;
+  transition: fill 200ms ease-in;
 }
 
 .social-links a:hover {
