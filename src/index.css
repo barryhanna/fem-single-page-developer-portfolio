@@ -13,7 +13,7 @@
 :root {
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: var(--clr-black);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -38,6 +38,7 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
+  padding: 5%;
 }
 
 h1,
@@ -47,9 +48,18 @@ h3 {
 }
 
 h1 {
+  position: relative;
   font-size: var(--fs-xl);
   line-height: 1;
   letter-spacing: -2.5px;
+}
+
+h1::before {
+  position: absolute;
+  background-image: url(/assets/images/pattern-rings.svg);
+  content: '';
+  left: 0;
+  top: 0;
 }
 
 h2 {
@@ -87,6 +97,7 @@ button {
   font-size: 1rem;
   font-weight: 700;
   padding-bottom: 0.25em;
+  transition: color 200ms ease-in;
   cursor: pointer;
 }
 
@@ -95,11 +106,24 @@ button:hover {
 }
 
 .name-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: -0.44px;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
+}
+
+.social-links ul {
+  gap: 0.75em;
+  fill: var(--clr-white);
+  transtion: fill 200ms ease-in;
+}
+
+.social-links a:hover {
+  fill: var(--clr-primary);
 }
 
 .columns {
@@ -136,4 +160,8 @@ button:hover {
   overflow: visible !important;
   width: auto !important;
   white-space: normal !important;
+}
+
+.flow > * + * {
+  margin-top: 3rem;
 }

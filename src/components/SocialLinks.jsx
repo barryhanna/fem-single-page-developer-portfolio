@@ -6,7 +6,7 @@ import TwitterIcon from '../components/icons/TwitterIcon';
 
 export default function SocialLinks() {
   return (
-    <nav>
+    <nav className="social-links">
       <ul role="list">
         <li>
           <a href="#">
