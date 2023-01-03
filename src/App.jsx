@@ -16,9 +16,11 @@ function App() {
         <Hero />
         <Skills />
         <Projects />
-        <Contact />
       </main>
-      <Footer />
+      <div className="bg">
+        <Contact />
+        <Footer />
+      </div>
     </div>
   );
 }

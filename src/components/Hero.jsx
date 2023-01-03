@@ -7,7 +7,7 @@ export default function Hero() {
     <div className="hero">
       <Container>
         <div className="columns">
-          <div className="col-left">
+          <div className="col-left flow">
             <h1>
               Nice to meet you!
               <br />
@@ -21,7 +21,7 @@ export default function Hero() {
           </div>
           <div className="col-right">
             <div className="profile-photo__container">
-              <img class="hero-img" src={heroImg} alt="Adam Keyes" />
+              <img className="hero-img" src={heroImg} alt="Adam Keyes" />
             </div>
           </div>
         </div>

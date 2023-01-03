@@ -28,14 +28,14 @@
   --clr-white: hsl(0, 0%, 100%);
   --clr-error: #ff6f5b;
 
-  --fs-xl: 88px;
-  --fs-l: 48px;
-  --fs-m: 24px;
+  --fs-xl: clamp(2.5rem, 8vw, 5.5rem);
+  --fs-l: clamp(1rem, 3vw, 3rem);
+  --fs-m: clamp(1rem, 2vw, 1.5rem);
 }
 
 body {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 16px;
+  font-size: 1.125rem;
   line-height: 24px;
   font-weight: 400;
   padding: 5%;
@@ -61,7 +61,6 @@ h1 {
 .hero::before {
   --width: 530px;
   position: absolute;
-  /* background: crimson; */
   background-image: url(./assets/images/pattern-rings.svg);
   content: '';
   left: calc((var(--width) / 2) * -1);
@@ -114,19 +113,34 @@ textarea {
 }
 
 button {
+  position: relative;
   background-color: transparent;
   border: none;
-  border-bottom: 3px solid var(--clr-primary);
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: 700;
   padding-bottom: 0.25em;
   transition: color 200ms ease-in;
   cursor: pointer;
+  padding-left: 0;
+}
+
+button::after {
+  position: absolute;
+  content: '';
+  top: 110%;
+  left: 0;
+  height: 5px;
+  width: 95%;
+  background-color: var(--clr-primary);
 }
 
 button:hover {
   color: var(--clr-primary);
+}
+
+.bg {
+  background-color: var(--clr-dark-grey);
 }
 
 .name-logo {
@@ -160,6 +174,43 @@ button:hover {
   flex: 50% 1 1;
 }
 
+.skills-list {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 100px);
+  border-top: 1px solid var(--clr-light-grey);
+  padding-block: 2em;
+  margin-block: 3em;
+}
+
+.skills-list::after {
+  --width: 530px;
+  position: absolute;
+  content: '';
+  background-image: url(./assets/images/pattern-rings.svg);
+  right: 0;
+  bottom: 0;
+  height: 129px;
+  width: var(--width);
+  transform: translateX(50%);
+}
+
+.skill-item h3 {
+  font-size: var(--fs-l);
+  font-weight: 700;
+  margin-bottom: 0.25em;
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.project-screenshot {
+  width: 200px;
+}
+
 .sr-only {
   border: 0 !important;
   clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
@@ -188,4 +239,8 @@ button:hover {
 
 .flow > * + * {
   margin-top: 3rem;
+}
+
+.flow\:small > * + * {
+  margin-top: 1rem;
 }
