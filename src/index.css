@@ -38,13 +38,14 @@ body {
   font-size: 1.125rem;
   line-height: 24px;
   font-weight: 400;
-  padding: 5%;
+  overflow-x: clip;
 }
 
 h1,
 h2,
 h3 {
   font-weight: 700;
+  font-variation-settings: 'wght' 700;
 }
 
 h1 {
@@ -52,6 +53,12 @@ h1 {
   font-size: var(--fs-xl);
   line-height: 1;
   letter-spacing: -2.5px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 5%;
 }
 
 .hero {
@@ -118,7 +125,7 @@ button {
   border: none;
   text-transform: uppercase;
   font-size: 1rem;
-  font-weight: 700;
+  font-variation-settings: 'wght' 700;
   padding-bottom: 0.25em;
   transition: color 200ms ease-in;
   cursor: pointer;
@@ -145,7 +152,7 @@ button:hover {
 
 .name-logo {
   font-size: 2rem;
-  font-weight: bold;
+  font-variation-settings: 'wght' 700;
   letter-spacing: -0.44px;
 }
 
@@ -200,6 +207,15 @@ button:hover {
   font-size: var(--fs-l);
   font-weight: 700;
   margin-bottom: 0.25em;
+}
+
+.projects-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.projects-header h2 {
+  font-size: var(--fs-l);
 }
 
 .projects-list {

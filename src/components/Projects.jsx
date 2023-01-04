@@ -8,6 +8,7 @@ export default function Projects() {
       <Container>
         <div className="projects-header">
           <h2>Projects</h2>
+          <button>Contact Me</button>
         </div>
         <div className="projects-list">
           <div className="project-item">
@@ -41,7 +42,6 @@ export default function Projects() {
             </div>
           </div>
         </div>
-        <button>Contact Me</button>
       </Container>
     </div>
   );
