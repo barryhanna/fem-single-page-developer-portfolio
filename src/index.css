@@ -32,6 +32,8 @@
   --fs-xl: clamp(2.5rem, 8vw, 5.5rem);
   --fs-l: clamp(1rem, 3vw, 3rem);
   --fs-m: clamp(1rem, 2vw, 1.5rem);
+
+  --color-button-text-hover: var(--clr-primary);
 }
 
 body {
@@ -49,7 +51,8 @@ h3 {
   font-variation-settings: 'wght' 700;
 }
 
-h1 {
+h1,
+.hero-title {
   position: relative;
   font-size: var(--fs-xl);
   line-height: 1;
@@ -95,7 +98,8 @@ textarea {
   resize: none;
 }
 
-button {
+button,
+.btn {
   position: relative;
   background-color: transparent;
   border: none;
@@ -121,7 +125,7 @@ button::after {
 }
 
 button:hover {
-  color: var(--clr-primary);
+  color: var(--color-button-text-hover);
 }
 
 /* Hero */

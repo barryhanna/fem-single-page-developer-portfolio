@@ -8,7 +8,7 @@ export default function Hero() {
       <Container>
         <div className="columns">
           <div className="col-left flow">
-            <h1>
+            <h1 className="hero-title">
               Nice to meet you!
               <br />
               I'm Adam Keyes.
