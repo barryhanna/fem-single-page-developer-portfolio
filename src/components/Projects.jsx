@@ -14,32 +14,10 @@ export default function Projects() {
           <div className="project-item">
             <img className="project-screenshot" src={projectImg1} alt="" />
             <h4 className="project-title">Design Portfolio</h4>
-            <div className="skills">
-              <p>
-                <span>HTML</span>
-                <span>CSS</span>
-              </p>
-            </div>
-          </div>
-          <div className="project-item">
-            <img className="project-screenshot" src={projectImg1} alt="" />
-            <h4 className="project-title">Design Portfolio</h4>
-            <div className="skills">
-              <p>
-                <span>HTML</span>
-                <span>CSS</span>
-              </p>
-            </div>
-          </div>
-          <div className="project-item">
-            <img className="project-screenshot" src={projectImg1} alt="" />
-            <h4 className="project-title">Design Portfolio</h4>
-            <div className="skills">
-              <p>
-                <span>HTML</span>
-                <span>CSS</span>
-              </p>
-            </div>
+            <p className="project-skills">
+              <span>HTML</span>
+              <span>CSS</span>
+            </p>
           </div>
         </div>
       </Container>

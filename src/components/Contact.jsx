@@ -5,7 +5,7 @@ import Form from './Form';
 export default function Contact() {
   return (
     <Container>
-      <div className="columns">
+      <div className="columns contact">
         <div className="col-left">
           <h2>Contact</h2>
           <p>
