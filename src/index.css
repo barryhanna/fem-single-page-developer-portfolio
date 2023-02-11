@@ -152,6 +152,12 @@ button:hover {
   z-index: -1;
 }
 
+.developer-name {
+  text-decoration: underline;
+  text-underline-offset: 12px;
+  text-decoration-color: var(--clr-primary);
+}
+
 .profile-photo__container {
   position: relative;
 }
@@ -306,6 +312,22 @@ form > * + * {
 form input,
 form textarea {
   width: 100%;
+}
+
+form input:invalid {
+  position: relative;
+  border-color: var(--clr-error);
+}
+
+form input:invalid::after {
+  position: absolute;
+  content: 'Invalid format';
+  background-color: #ff6f5b;
+  right: 0;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  z-index: 1001;
 }
 
 form button {

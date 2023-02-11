@@ -11,7 +11,7 @@ export default function Hero() {
             <h1 className="hero-title">
               Nice to meet you!
               <br />
-              I'm Adam Keyes.
+              I'm <span className="developer-name">Adam Keyes</span>.
             </h1>
             <p>
               Based in the UK, I’m a front-end developer passionate about

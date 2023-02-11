@@ -38,6 +38,7 @@ export default function Form() {
         placeholder="Email"
         id="email"
         name="email"
+        onInvalid="Sorry, invalid format here"
         value={formData.email}
         onChange={(e) => handleOnChange(e)}
       />
