@@ -186,8 +186,17 @@ button:hover {
 
 .social-links ul {
   gap: 0.75em;
+  color: var(--clr-white);
   fill: var(--clr-white);
   transition: fill 200ms ease-in;
+}
+
+.social-links a {
+  border-color: transparent;
+}
+
+.social-links svg {
+  fill: inherit;
 }
 
 .social-links a:hover {
