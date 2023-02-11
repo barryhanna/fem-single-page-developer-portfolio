@@ -1,6 +1,7 @@
 import React from 'react';
 import Container from './Container';
-import projectImg1 from '../assets/images/thumbnail-project-1-large.webp';
+import projects from '../data/projects.js';
+import ProjectItem from './ProjectItem';
 
 export default function Projects() {
   return (
@@ -13,14 +14,9 @@ export default function Projects() {
           </a>
         </div>
         <div className="projects-list">
-          <div className="project-item">
-            <img className="project-screenshot" src={projectImg1} alt="" />
-            <h4 className="project-title">Design Portfolio</h4>
-            <p className="project-skills">
-              <span>HTML</span>
-              <span>CSS</span>
-            </p>
-          </div>
+          {projects.map((project) => (
+            <ProjectItem {...project} />
+          ))}
         </div>
       </Container>
     </div>
