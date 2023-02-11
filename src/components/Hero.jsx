@@ -17,7 +17,9 @@ export default function Hero() {
               Based in the UK, I’m a front-end developer passionate about
               building accessible web apps that users love.
             </p>
-            <button>Contact Me</button>
+            <a href="#contact" className="btn">
+              Contact Me
+            </a>
           </div>
           <div className="col-right">
             <div className="profile-photo__container">

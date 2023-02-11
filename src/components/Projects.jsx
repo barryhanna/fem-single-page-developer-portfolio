@@ -8,7 +8,9 @@ export default function Projects() {
       <Container>
         <div className="projects-header">
           <h2>Projects</h2>
-          <button>Contact Me</button>
+          <a href="#contact" className="btn">
+            Contact Me
+          </a>
         </div>
         <div className="projects-list">
           <div className="project-item">

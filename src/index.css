@@ -42,6 +42,7 @@ body {
   line-height: 1.6;
   font-weight: 400;
   overflow-x: clip;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -81,7 +82,8 @@ img {
 label,
 input,
 button,
-textarea {
+textarea,
+a {
   display: block;
   font-family: inherit;
   font-variation-settings: 'wght' 700;
@@ -100,10 +102,13 @@ textarea {
 
 button,
 .btn {
+  display: inline-block;
   position: relative;
   background-color: transparent;
+  color: var(--clr-white);
   border: none;
   text-transform: uppercase;
+  text-decoration: none;
   font-size: 1rem;
   padding-bottom: 0.25em;
   transition: color 200ms ease-in;
@@ -114,7 +119,8 @@ button,
   align-self: center;
 }
 
-button::after {
+button::after,
+.btn::after {
   position: absolute;
   content: '';
   top: 110%;
