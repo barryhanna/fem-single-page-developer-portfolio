@@ -264,6 +264,41 @@ button:hover {
   text-transform: uppercase;
 }
 
+.project-item-image {
+  position: relative;
+  text-align: center;
+  overflow: clip;
+}
+
+.project-item-image a {
+  font-size: 0.9rem;
+  color: var(--clr-white);
+  text-underline-offset: 5px;
+  text-decoration-color: var(--clr-primary);
+  border-bottom: none;
+}
+
+.project-item-image a:hover {
+  color: var(--clr-primary);
+}
+
+.project-item-image__overlay {
+  display: grid;
+  place-content: center;
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  transition: transform 250ms ease-in, opacity 250ms ease-in;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.project-item-image:hover .project-item-image__overlay {
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 250ms ease-in, opacity 250ms ease-in;
+}
+
 .project-title {
   font-variation-settings: 'wght' 700;
   font-size: var(--fs-m);
