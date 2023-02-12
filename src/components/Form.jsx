@@ -30,6 +30,7 @@ export default function Form() {
         value={formData.name}
         onChange={(e) => handleOnChange(e)}
       />
+      <div className="error"></div>
       <label className="sr-only" htmlFor="email">
         Email
       </label>
@@ -41,6 +42,9 @@ export default function Form() {
         value={formData.email}
         onChange={(e) => handleOnChange(e)}
       />
+      <div className="error">
+        <p>Sorry, invalid format here</p>
+      </div>
       <label className="sr-only" htmlFor="message">
         Message
       </label>
@@ -51,6 +55,7 @@ export default function Form() {
         value={formData.message}
         onChange={(e) => handleOnChange(e)}
       ></textarea>
+
       <button type="submit">Send Message</button>
     </form>
   );

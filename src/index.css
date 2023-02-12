@@ -354,15 +354,15 @@ form input:invalid {
   border-color: var(--clr-error);
 }
 
-form input:invalid::after {
-  position: absolute;
-  content: 'Invalid format';
-  background-color: #ff6f5b;
-  right: 0;
-  bottom: 0;
-  width: 50px;
-  height: 50px;
-  z-index: 1001;
+form input + .error {
+  display: none;
+  font-size: 0.75rem;
+  text-align: right;
+  color: var(--clr-error);
+}
+
+form input:invalid + .error {
+  display: block;
 }
 
 form button {
