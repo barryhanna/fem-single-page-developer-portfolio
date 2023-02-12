@@ -1,8 +1,11 @@
 import React from 'react';
 import Container from './Container';
 import heroImg from '../assets/images/image-profile-desktop.webp';
+import { NameContext } from './NameProvider';
 
 export default function Hero() {
+  const { name } = React.useContext(NameContext);
+
   return (
     <div className="hero">
       <Container>
@@ -11,7 +14,7 @@ export default function Hero() {
             <h1 className="hero-title">
               Nice to meet you!
               <br />
-              I'm <span className="developer-name">Adam Keyes</span>.
+              I'm <span className="developer-name">{name}</span>.
             </h1>
             <p>
               Based in the UK, I’m a front-end developer passionate about

@@ -1,5 +1,7 @@
 import React from 'react';
+import { NameContext } from './NameProvider';
 
 export default function NameLogo() {
-  return <p className="name-logo">adamkeyes</p>;
+  const { name } = React.useContext(NameContext);
+  return <p className="name-logo">{name.split(' ').join('').toLowerCase()}</p>;
 }

@@ -19,7 +19,7 @@ export default function ProjectItem({
       <h4 className="project-title">{name}</h4>
       <p className="project-skills">
         {skills.map((skill) => (
-          <span>{skill}</span>
+          <span key={skill}>{skill}</span>
         ))}
       </p>
     </div>

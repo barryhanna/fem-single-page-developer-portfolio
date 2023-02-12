@@ -14,8 +14,8 @@ export default function Projects() {
           </a>
         </div>
         <div className="projects-list">
-          {projects.map((project) => (
-            <ProjectItem {...project} />
+          {projects.map((project, i) => (
+            <ProjectItem key={`${project.link}:${i}`} {...project} />
           ))}
         </div>
       </Container>
