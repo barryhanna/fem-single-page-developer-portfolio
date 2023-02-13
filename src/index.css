@@ -200,6 +200,7 @@ button:hover {
 
 .social-links ul {
   gap: 0.75em;
+  padding-left: 0;
   color: var(--clr-white);
   fill: var(--clr-white);
   transition: fill 200ms ease-in;
@@ -298,7 +299,7 @@ button:hover {
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.75);
-  transition: transform 250ms ease-in, opacity 250ms ease-in;
+  transition: transform 250ms ease-in-out, opacity 250ms ease-in-out;
   transform: translateY(100%);
   opacity: 0;
 }
@@ -316,7 +317,7 @@ button:hover {
 .project-item-image:hover .project-item-image__overlay {
   transform: translateY(0);
   opacity: 1;
-  transition: transform 250ms ease-in, opacity 250ms ease-in;
+  transition: transform 250ms ease-in-out, opacity 250ms ease-in-out;
 }
 
 .project-title {
@@ -444,9 +445,17 @@ form button {
 }
 
 @media screen and (max-width: 600px) {
+  .navbar {
+    text-align: center;
+  }
+
   .columns {
     gap: 1rem;
     flex-direction: column;
+  }
+
+  .col-right {
+    margin-left: 0;
   }
 
   .columns.columns-reverse {

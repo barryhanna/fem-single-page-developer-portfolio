@@ -4,9 +4,9 @@ import SocialLinks from './SocialLinks';
 
 export default function Navbar() {
   return (
-    <div className="navbar">
-      <NameLogo />
-      <SocialLinks />
+    <div className="navbar columns">
+      <NameLogo className="col-left" />
+      <SocialLinks className="col-right" />
     </div>
   );
 }

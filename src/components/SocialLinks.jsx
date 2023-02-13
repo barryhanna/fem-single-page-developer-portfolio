@@ -4,9 +4,9 @@ import FrontendMentorIcon from '../components/icons/FrontendMentorIcon';
 import LinkedInIcon from '../components/icons/LinkedInIcon';
 import TwitterIcon from '../components/icons/TwitterIcon';
 
-export default function SocialLinks() {
+export default function SocialLinks({ ...delegated }) {
   return (
-    <nav className="social-links">
+    <nav {...delegated} className="social-links">
       <ul role="list">
         <li>
           <a href="#">
