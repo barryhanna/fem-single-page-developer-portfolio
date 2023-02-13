@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <div className="hero">
       <Container>
-        <div className="columns">
+        <div className="columns columns-reverse">
           <div className="col-left flow">
             <h1 className="hero-title">
               Nice to meet you!

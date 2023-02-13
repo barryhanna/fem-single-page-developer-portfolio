@@ -9,6 +9,7 @@
 *::after {
   margin: 0;
   box-sizing: border-box;
+  /* outline: 1px solid crimson; */
 }
 :root {
   color-scheme: light dark;
@@ -160,6 +161,8 @@ button:hover {
 
 .profile-photo__container {
   position: relative;
+  margin-top: -65%;
+  z-index: -1;
 }
 
 .profile-photo__container::after {
@@ -253,11 +256,12 @@ button:hover {
 
 .projects-list {
   display: grid;
+  gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
 }
 
 .project-screenshot {
-  width: 200px;
+  object-fit: cover;
 }
 
 .project-item {
@@ -421,4 +425,18 @@ form button {
   max-width: 1000px;
   margin: 0 auto;
   padding: 5%;
+}
+
+@media screen and (max-width: 600px) {
+  .columns {
+    flex-direction: column;
+  }
+
+  .columns.columns-reverse {
+    flex-direction: column-reverse;
+  }
+
+  .profile-photo__container {
+    margin-top: 0;
+  }
 }
