@@ -386,6 +386,7 @@ form input:invalid + .error {
 }
 
 form button {
+  display: block;
   margin-left: auto;
   padding-right: 0;
 }
