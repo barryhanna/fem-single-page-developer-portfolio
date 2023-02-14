@@ -390,6 +390,12 @@ form button {
   padding-right: 0;
 }
 
+/* Footer */
+footer .navbar {
+  padding-top: 1rem;
+  border-top: 1px solid var(--clr-white);
+}
+
 /* Utilities */
 
 .sr-only {
