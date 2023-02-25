@@ -132,7 +132,8 @@ button::after,
   background-color: var(--clr-primary);
 }
 
-button:hover {
+button:hover,
+.btn:hover {
   color: var(--color-button-text-hover);
 }
 
