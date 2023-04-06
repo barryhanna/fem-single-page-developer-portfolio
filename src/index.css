@@ -132,7 +132,8 @@ button::after,
   background-color: var(--clr-primary);
 }
 
-button:hover {
+button:hover,
+.btn:hover {
   color: var(--color-button-text-hover);
 }
 
@@ -221,14 +222,32 @@ button:hover {
 /* Skills */
 
 .skills-list {
-  position: relative;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 100px);
+  position: relative;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 200px));
+  gap: 2em;
+  justify-items: center;
   border-top: 1px solid var(--clr-light-grey);
   padding-block: 2em;
   margin-block: 3em;
 }
+
+/* @media only screen and (min-width: 670px) {
+  .skills-list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 100px);
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .skills-list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 100px);
+    border-top: 1px solid var(--clr-light-grey);
+    padding-block: 2em;
+    margin-block: 3em;
+  }
+} */
 
 .skills-list::after {
   --width: 530px;
@@ -263,7 +282,7 @@ button:hover {
 .projects-list {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
 }
 
 .project-screenshot {
@@ -387,8 +406,15 @@ form input:invalid + .error {
 }
 
 form button {
+  display: block;
   margin-left: auto;
   padding-right: 0;
+}
+
+/* Footer */
+footer .navbar {
+  padding-top: 1rem;
+  border-top: 1px solid var(--clr-white);
 }
 
 /* Utilities */
@@ -480,10 +506,6 @@ form button {
     margin-right: 0;
   }
 
-  .projects-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .project-item-image__overlay {
     display: block;
     position: static;
@@ -496,11 +518,5 @@ form button {
 
   form {
     padding-left: 0;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .projects-list {
-    grid-template-columns: 1fr;
   }
 }
